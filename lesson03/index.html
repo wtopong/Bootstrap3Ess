@@ -15,28 +15,86 @@
     <section class="col-xs-12">
 
     <h1>Headline 1<span class="small"> small class</span></h1>
-    <p>Lorem ipsum <u>u tag </u>dolor sit amet, <mark>mark tag </mark>consectetur adipisicing <small>small tag </small>elit. Sequi at , vero animi earum delectus, <del>del tag </del>quam ex ad, dolorem quo <b>b tag </b>omnis consequuntur <ins>ins tag</ins> dicta fugit. Nulla porro, accusantium quaerat commodi iste.</p>
+    <p>Lorem ipsum <u>u tag </u>dolor sit amet, <mark>mark tag </mark>consectetur adipisicing <small>small tag </small>elit. Sequi at , vero animi earum delectus, <del>del tag </del>quam ex ad, <em></em>dolorem quo <b>b tag </b>omnis consequuntur <ins>ins tag</ins> dicta fugit. Nulla porro, accusantium quaerat commodi iste.</p>
 
+    <h2>blockquote-reverse and footer tag</h2>
     <blockquote class="blockquote-reverse">
       <p>Adipisci veritatis esse expedita odit neque quam! Repellat quas ad cum porro amet, maiores, ullam doloremque, ab dolores in magni ea enim. Commodi quidem consequuntur animi nemo pariatur cumque distinctio.</p>
       <footer>By Nicolson</footer>
     </blockquote>
     
+    <h2 class="text-capitalize">List unstyled</h2>
+    <ul class="list-unstyled">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
 
-    <h2>Headline 2</h2>
-    <p>Odit animi quasi delectus soluta quos adipisci quod ab, nisi nam. A corporis similique temporibus expedita beatae sed asperiores. Atque deleniti et sapiente officiis repellendus reprehenderit numquam eligendi odio mollitia.</p>
+    <h2 class="text-lowercase">Text lowercase</h2>
+    <ul class="list-inline">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
 
-    <h3>Headline 3</h3>
-    <p>Harum nihil, vero cupiditate. Dicta molestias, sint. Numquam officia, omnis, deserunt laborum consequatur beatae odit quas blanditiis id rerum nesciunt eaque quaerat ipsa reprehenderit. Quia nihil voluptatem eum rem id?</p>
+    <h2>Definition</h2>
+    <dl class="dl-horizontal">
+      <dt>term</dt>
+      <dd>Odit animi quasi delectus soluta quos adipisci quod ab, nisi nam. A corporis similique temporibus expedita beatae sed asperiores. Atque deleniti et sapiente officiis repellendus reprehenderit numquam eligendi odio mollitia.</dd>
+      <dt>term</dt>
+      <dd>Harum nihil, vero cupiditate. Dicta molestias, sint. Numquam officia, omnis, deserunt laborum consequatur beatae odit quas blanditiis id rerum nesciunt eaque quaerat ipsa reprehenderit. Quia nihil voluptatem eum rem id?</dd>
+      <dt>term</dt>
+      <dd>Sunt cum quod dolorem a, ex tempore quibusdam dicta, animi sequi soluta eius eos repudiandae similique praesentium officia ratione asperiores aliquam voluptate cumque minima veritatis. In dolore, corrupti impedit beatae!</dd>
+    </dl>
 
-    <h4>Headline 4</h4>
-    <p>Sunt cum quod dolorem a, ex tempore quibusdam dicta, animi sequi soluta eius eos repudiandae similique praesentium officia ratione asperiores aliquam voluptate cumque minima veritatis. In dolore, corrupti impedit beatae!</p>
+    <h2>Inline Code</h2>
+    <p>To emphasize text, you can use the <code>&lt;em&gt;</code></p>
 
-    <h5>Headline 5</h5>
-    <p>Dignissimos repellendus ipsa autem blanditiis minus mollitia recusandae, at fugit dolorum dolorem! Ea minima debitis quam vel alias magnam aspernatur, eius optio quos voluptates praesentium, tempora nostrum earum incidunt voluptatem.</p>
+    <h2>Control Keys</h2>
+    <p>To stop execution of program <kbd>control-c</kbd> or <kbd>q</kbd></p>
 
-    <h6>Headline 6</h6>
-    <p>Dolores iure consectetur reiciendis sunt quibusdam adipisci libero laudantium at totam nemo numquam repellendus, voluptatem amet hic molestias accusamus harum eos, consequatur distinctio. Omnis dolorem, odit, consequuntur doloribus consectetur odio.</p>
+    <h2>Variable</h2>
+    <var>e</var> = <var>m</var><var>c</var>&sup2;
+
+    <h2>Short Script</h2>
+    <pre>//replace IMG inside carousels with a background image 
+    $('#featured .item img').each(function() { 
+      var imgSrc = $(this).attr('src'); 
+      $(this).parent().css({'background-image': 
+      'url('+imgSrc+')'}); 
+      $(this).remove();
+    });
+    </pre>
+
+    <h3>Sample Output</h3>
+    <sample>&lt;div class=&quot;item active&quot; style=&quot;background-image: url(images/carousel-lifestyle.jpg);&quot;&gt;&lt;/div&gt;</sample>
+    
+    <h4>Long Script</h4>
+    <pre class="pre-scrollable">
+    //replace IMG inside carousels with a background image
+    $('#featured .item img').each(function() {
+      var imgSrc = $(this).attr('src');
+      $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+      $(this).remove();
+    });
+
+    //Use smooth scrolling when clicking on navigation
+    $('.navbar a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') === 
+      this.pathname.replace(/^\//,'') && 
+      location.hostname === this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top-topoffset+2
+          }, 500);
+          return false;
+        } //target.length
+      } //click function
+    }); //smooth scrolling
+    </pre>
+
     </section>
   </div><!-- row -->   
 </div><!-- content container -->
